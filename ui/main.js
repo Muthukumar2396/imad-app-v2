@@ -1,6 +1,4 @@
 //copunter code
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick= function(){
   // create req obj
@@ -21,6 +19,8 @@ submit.onclick= function(){
   };
   
  // Make the req
+ var nameInput = document.getElementById('name');
+var name = nameInput.value;
  request.open('GET','http://muthukumar2396.imad.hasura-app.io/submit-name?name='+name,true);
  request.send(null);
 };
